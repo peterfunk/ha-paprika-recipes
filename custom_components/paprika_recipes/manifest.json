@@ -1,0 +1,14 @@
+{
+  "domain": "paprika_recipes",
+  "name": "Paprika Recipes",
+  "codeowners": ["@peterfunk"],
+  "config_flow": true,
+  "dependencies": ["http", "frontend", "panel_custom", "websocket_api"],
+  "documentation": "https://github.com/peterfunk/ha-paprika-recipes",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/peterfunk/ha-paprika-recipes/issues",
+  "requirements": [],
+  "single_config_entry": true,
+  "version": "1.0.0"
+}

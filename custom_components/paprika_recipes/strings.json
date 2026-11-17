@@ -1,0 +1,40 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Paprika",
+        "description": "Use your Paprika account email and password. Access is read-only. This is an unofficial integration, not affiliated with Paprika's maker.",
+        "data": { "email": "[%key:common::config_flow::data::email%]", "password": "[%key:common::config_flow::data::password%]" }
+      },
+      "reauth_confirm": {
+        "title": "Re-enter your Paprika password",
+        "description": "Paprika rejected the saved login for {email}.",
+        "data": { "password": "[%key:common::config_flow::data::password%]" }
+      }
+    },
+    "error": {
+      "invalid_auth": "[%key:common::config_flow::error::invalid_auth%]",
+      "cannot_connect": "[%key:common::config_flow::error::cannot_connect%]",
+      "unknown": "[%key:common::config_flow::error::unknown%]"
+    },
+    "abort": {
+      "already_configured": "[%key:common::config_flow::abort::already_configured_account%]",
+      "reauth_successful": "[%key:common::config_flow::abort::reauth_successful%]"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Paprika Recipes options",
+        "data": { "sync_interval": "Sync interval (minutes)" }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "recipes": { "name": "Recipes" },
+      "last_sync": { "name": "Last sync" }
+    },
+    "button": { "sync_now": { "name": "Sync now" } }
+  }
+}
